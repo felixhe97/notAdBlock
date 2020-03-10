@@ -6,10 +6,6 @@ RangeFilter::RangeFilter(double range_min, double range_max)
     this->max_range = range_max;
 }
 
-RangeFilter::~RangeFilter(void)
-{
-}
-
 bool RangeFilter::setMinRange(double range)
 {
     if (range < 0 || range > this->max_range) {
