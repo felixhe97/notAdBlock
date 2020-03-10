@@ -40,4 +40,3 @@ std::vector<double> RangeFilter::update(std::vector<double> &ranges)
     }
     return ans;
 }
-
