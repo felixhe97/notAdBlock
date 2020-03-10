@@ -6,7 +6,6 @@
 
 int main(){
 
-    // TODO test range filter
     RangeFilter rf;
     std::vector<double> test1 = {
         0.03, 0.02, 0.0301, 0.0299, 0.3, 5, 49, 49.99, 50, 50.01, 50.0001,
@@ -17,7 +16,6 @@ int main(){
     }
     std::cout << '\n';
 
-    // TODO test median filter
     MedianFilter mf(3);
     std::vector<std::vector<double>> testMedian = {
         {0, 1, 2, 1, 3},

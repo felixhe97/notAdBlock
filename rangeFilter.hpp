@@ -14,8 +14,8 @@ class RangeFilter : public Filter {
         /**
          * Constructor
          * 
-         * @param range_min 
-         * @param range_max
+         * @param range_min floor, filter minimum value
+         * @param range_max ceiling, filter maximum value
          */
         RangeFilter(double range_min = 0.03, double range_max = 50);
 

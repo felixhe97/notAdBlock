@@ -8,6 +8,7 @@ MedianFilter::MedianFilter(std::size_t num_prev_scans)
     this->start_removing = false;
 }
 
+// init the private member variables
 void inline initialize(std::vector<std::queue<double>> &q, std::vector<std::multiset<double>> &m,
     std::vector<std::multiset<double>::iterator> &i, double val) 
 {
@@ -20,6 +21,7 @@ void inline initialize(std::vector<std::queue<double>> &q, std::vector<std::mult
     i.push_back(m.back().begin());
 }
 
+// computer the median of window
 double inline findMedian(std::queue<double> &q, std::multiset<double>::iterator &it, double val) 
 {
     if (q.size() % 2) { // odd length
@@ -35,7 +37,7 @@ double inline findMedian(std::queue<double> &q, std::multiset<double>::iterator 
     }
 }
 
-// TODO test
+// remove oldest value from multiset, modify pointer
 void inline balanceSortedData(std::queue<double> &q, std::multiset<double> &m,
     std::multiset<double>::iterator &it)
 {
@@ -53,7 +55,6 @@ void inline balanceSortedData(std::queue<double> &q, std::multiset<double> &m,
     q.pop();
 }
 
-// assuming all streams filled with n items
 std::vector<double> MedianFilter::update(std::vector<double> &scans)
 {
     if (!this->start_removing) {
