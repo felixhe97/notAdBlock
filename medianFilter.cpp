@@ -21,7 +21,7 @@ static void inline initialize(std::vector<std::queue<double>> &q, std::vector<st
     i.push_back(m.back().begin());
 }
 
-// computer the median of window
+// compute the median of window
 static double inline findMedian(std::queue<double> &q, std::multiset<double>::iterator &it, double val) 
 {
     if (q.size() % 2) { // odd length
